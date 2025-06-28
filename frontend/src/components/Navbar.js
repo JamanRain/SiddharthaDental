@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/Logo.png';
+import logo from '../assets/Logo2.png';
 
 const Navbar = () => {
   const [showAdminBtn, setShowAdminBtn] = useState(false);
@@ -27,7 +27,6 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <img src={logo} alt="Clinic Logo" className="logo-img" />
-        <span className="logo-text">SIDDHARTHA DENTAL CLINIC</span>
       </div>
       <ul className="nav-links">
         <li><a href="#home">Home</a></li>
