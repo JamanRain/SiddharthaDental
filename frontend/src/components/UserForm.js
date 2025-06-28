@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+// Define the API base URL using the environment variable
+// This will be 'https://siddharthadental.onrender.com' in production
+// and 'http://localhost:5000' during local development if not set.
+const API_BASE_URL = process.env.REACT_APP_API_BASE || 'http://localhost:5000';
+
 const UserForm = () => {
   const [form, setForm] = useState({
     name: '',
@@ -46,7 +51,8 @@ const UserForm = () => {
       if (selectedDate) {
         setStatus('Fetching available slots...');
         try {
-          const res = await fetch(`http://localhost:5000/get-available-slots/${selectedDate}`);
+          // Use API_BASE_URL here
+          const res = await fetch(`${API_BASE_URL}/get-available-slots/${selectedDate}`);
           const data = await res.json();
           if (data.success === false) { // Handle error from backend
             setStatus(data.message || 'Failed to fetch slots.');
@@ -102,8 +108,8 @@ const UserForm = () => {
 
     setStatus('Submitting booking request...');
     try {
-      // Directly save booking without payment
-      const res = await fetch('http://localhost:5000/book-appointment', {
+      // Use API_BASE_URL here
+      const res = await fetch(`${API_BASE_URL}/book-appointment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -129,7 +135,7 @@ const UserForm = () => {
         setAvailableSlots(updatedSlots);
         setSelectedSlot(null); // Clear selected slot after successful booking
         setForm({ // Clear form fields
-          name: '', email: '', phone: '', service: 'Root Canal',
+          name: '', email: '', phone: '', service: 'Dental Check-up', // Changed default service back to Dental Check-up for form clear
         });
       } else {
         setStatus(data.message || 'Booking failed. Please try again.');
@@ -143,7 +149,7 @@ const UserForm = () => {
   // Function to generate 30-minute time slots for the day
   const generateTimeSlots = () => {
     const slots = [];
-    for (let h = CLINIC_START_HOUR; h < CLINIC_END_HOUR; h++) {
+    for (let h = CLINIC_START_HOUR; h < CLINIC_END_HOUR; h++) { // 10 AM to 7 PM (clinic closes at 8 PM, so last slot starts at 7:30 PM)
       slots.push(`${h.toString().padStart(2, '0')}:00`);
       slots.push(`${h.toString().padStart(2, '0')}:30`);
     }
