@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaInstagram, FaWhatsapp, FaFacebook, FaYoutube } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -93,22 +93,7 @@ const Contact = () => {
           <p>Location: 1ST FLOOR, MUNNI MARKET OPP. HUB MALL, GS Rd, Bhangagarh, Guwahati, Assam</p>
         </div>
 
-        <div className="social-buttons" style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-           <a href="https://www.youtube.com/@siddharthadental" target="_blank" rel="noopener noreferrer" className="btn social-btn youtube">
-            <FaYoutube size={24} />
-          </a>
-           <a href="https://wa.me/916901342433" target="_blank" rel="noopener noreferrer" className="btn social-btn whatsapp">
-            <FaWhatsapp size={24} />
-          </a>
-          <a href="https://www.instagram.com/siddhartha_dental_clinic/" target="_blank" rel="noopener noreferrer" className="btn social-btn instagram">
-            <FaInstagram size={24} />
-          </a>
-         
-          <a href="https://www.facebook.com/siddhartha.dental.ghy/" target="_blank" rel="noopener noreferrer" className="btn social-btn facebook">
-            <FaFacebook size={24} />
-          </a>
-         
-        </div>
+        
       </section>
 
       {/* Floating WhatsApp Button */}

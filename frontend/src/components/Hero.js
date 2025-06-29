@@ -64,8 +64,9 @@ const Hero = () => {
 
         <div className="hero-overlay">
           <h1>
-            <span className="text-primary">SIDDHARTHA DENTAL</span> CLINIC
-          </h1>
+  <span className="text-primary">SIDDHARTHA DENTAL CLINIC</span><br />
+  <span className="text-secondary">AND IMPLANT CENTRE</span>
+</h1>
           <p>Delivering healthy smiles with compassion and technology.</p>
           <a href="#contact" className="btn">CONTACT</a>
         </div>

@@ -469,7 +469,7 @@ body, h1, h2, h3, p, ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #e3c6f7; /* User specified: DO NOT CHANGE */
+  background-color: #d1a3ef; /* User specified: DO NOT CHANGE */
 }
 
 
@@ -482,6 +482,14 @@ body, h1, h2, h3, p, ul {
 .logo-img {
   height: 75px;
   width: auto;
+  /* Adding a subtle border and shadow to the logo */
+  border-radius: 50%; /* Make it round if it fits the logo design */
+  transition: transform 0.3s ease;
+  transform: translateX(50px);
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Slight scale on hover for interactivity */
 }
 
 .nav-links {
@@ -490,12 +498,38 @@ body, h1, h2, h3, p, ul {
   gap: 40px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #4635B1; /* Theme color */
-  font-weight: 500;
+.nav-links li {
+    position: relative; /* Needed for the underline effect */
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: #FFFBCA; /* Changed to a lighter theme color for better contrast on #B771E5 background */
+  font-weight: 600; /* Made slightly bolder */
+  padding: 8px 0; /* Add padding for a larger hit area */
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative; /* For pseudo-elements */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: #4635B1; /* Theme color for the underline */
+    transition: width 0.3s ease-out;
+}
+
+.nav-links a:hover {
+  color: #4635B1; /* Change font color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
 
 .hero-slider-container {
   position: relative;
@@ -543,6 +577,13 @@ body, h1, h2, h3, p, ul {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-overlay .btn:hover {
+    background: #372B8B; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Stats Section */
@@ -556,6 +597,7 @@ body, h1, h2, h3, p, ul {
   border-radius: 30px;
   width: 80%;
   margin: 4rem auto 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Added shadow for stats section */
 }
 
 .stat-box {
@@ -563,11 +605,21 @@ body, h1, h2, h3, p, ul {
   min-width: 250px;
   margin: 1rem;
   text-align: center;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    background-color: rgba(255, 255, 255, 0.25); /* More opaque on hover */
 }
 
 .stat-box h2 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  color: #FFFBCA; /* Lighter color for numbers */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Text shadow for numbers */
 }
 
 .stat-box h4 {
@@ -590,7 +642,6 @@ body, h1, h2, h3, p, ul {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* =================== Doctors Section =================== */
 .doctors-section {
@@ -1329,3 +1380,110 @@ body, h1, h2, h3, p, ul {
 .admin-section button:hover {
     background-color: #372B8B; /* Darker shade of #4635B1 */
 }
+ 
+/* Footer component */
+.footer {
+  background-color: #0a2540;
+  color: #f1f1f1;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Policy component */
+
+.policy-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.policy-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.policy-page strong {
+  color: #007BFF;
+  font-weight: 600;
+}
+.policy-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.policy-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2a2a2a;
+}
+
+.policy-container p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+

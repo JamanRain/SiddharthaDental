@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,6 +14,11 @@ import PhotoGallery from './components/PhotoGallery';
 import ClinicTimings from './components/ClinicTimings';
 import UserForm from './components/UserForm';
 import AdminDashboard from './components/AdminDashboard';
+import Footer from './components/Footer';
+
+import PrivacyPolicy from './components/PrivacyPolicy';
+import RefundPolicy from './components/RefundPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,36 +39,49 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <Navbar />
-      <div id="home"><Hero /></div>
-      <div id="about"><About /></div>
-      <div id="services"><Services /></div>
-      <div id="videos"><VideoGallery /></div>
-      <div id="gallery"><PhotoGallery /></div>
-      <div id="faq"><DentalFAQ /></div>
-      <div id="reviews"><CustomerReviews /></div>
-      <CustomerFeedback />
-      <div id="timings"><ClinicTimings /></div>
-      <div id="contact"><Contact /></div>
-      <div id="booking">
-        
-        <UserForm />
-      </div>
 
-      {showAdminButton && !showAdminPanel && (
-        <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-          <button onClick={() => setShowAdminPanel(true)}>Go to Admin</button>
-        </div>
-      )}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <div id="home"><Hero /></div>
+              <div id="about"><About /></div>
+              <div id="services"><Services /></div>
+              <div id="videos"><VideoGallery /></div>
+              <div id="gallery"><PhotoGallery /></div>
+              <div id="faq"><DentalFAQ /></div>
+              <div id="reviews"><CustomerReviews /></div>
+              <CustomerFeedback />
+              <div id="timings"><ClinicTimings /></div>
+              <div id="contact"><Contact /></div>
+              <div id="booking"><UserForm /></div>
 
-      {showAdminPanel && (
-        <div id="admin" style={{ marginTop: '3rem' }}>
-          <AdminDashboard />
-        </div>
-      )}
-    </>
+              {showAdminButton && !showAdminPanel && (
+                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                  <button onClick={() => setShowAdminPanel(true)}>Go to Admin</button>
+                </div>
+              )}
+
+              {showAdminPanel && (
+                <div id="admin" style={{ marginTop: '3rem' }}>
+                  <AdminDashboard />
+                </div>
+              )}
+
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
