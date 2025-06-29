@@ -61,11 +61,11 @@ const CustomerReviews = () => {
                 <div className="review-images">
                   <div>
                     <img src={review.beforeImage} alt="Before treatment" className="review-image" />
-                    <p className="image-caption">Before</p>
+                    <p className="image-caption">After</p>
                   </div>
                   <div>
                     <img src={review.afterImage} alt="After treatment" className="review-image" />
-                    <p className="image-caption">After</p>
+                    <p className="image-caption">Before</p>
                   </div>
                 </div>
               )}
