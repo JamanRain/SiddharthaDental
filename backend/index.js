@@ -404,11 +404,5 @@ app.post('/admin/reject/:id', async (req, res) => {
   }
 
 });
-
-
-
-<<<<<<< HEAD
 app.listen(5000, () => console.log('Server running on port 5000'));
-=======
-app.listen(5000, () => console.log('Server running on port 5000'));
->>>>>>> ac4c194 (update)
+
