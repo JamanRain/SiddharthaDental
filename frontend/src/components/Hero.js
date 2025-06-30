@@ -68,7 +68,7 @@ const Hero = () => {
   <span className="text-secondary">AND IMPLANT CENTRE</span>
 </h1>
           <p>Delivering healthy smiles with compassion and technology.</p>
-          <a href="#contact" className="btn">CONTACT</a>
+          <a href="#contact" className="btn">CONTACT US</a>
         </div>
       </section>
 

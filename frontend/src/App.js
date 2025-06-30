@@ -56,8 +56,8 @@ function App() {
               <div id="reviews"><CustomerReviews /></div>
               <CustomerFeedback />
               <div id="timings"><ClinicTimings /></div>
-              <div id="contact"><Contact /></div>
               <div id="booking"><UserForm /></div>
+              <div id="contact"><Contact /></div>
 
               {showAdminButton && !showAdminPanel && (
                 <div style={{ textAlign: 'center', marginTop: '1rem' }}>

@@ -97,65 +97,6 @@ const razorpay = new Razorpay({
 });
 
 
-
-// Existing contact form route...
-
-app.post('/send-email', async (req, res) => {
-
-  const { name, email, message, phone } = req.body;
-
-  const transporter = createTransporter();
-
-
-
-  const adminMail = {
-
-    from: email,
-
-    to: process.env.ADMIN_EMAIL,
-
-    subject: `New Contact Form Submission from ${name}`,
-
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nMessage:\n${message}`
-
-  };
-
-
-
-  const userMail = {
-
-    from: process.env.ADMIN_EMAIL,
-
-    to: email,
-
-    subject: 'Thank you for contacting Siddhartha Dental Clinic',
-
-    text: `Dear ${name},\n\nWe have received your message:\n"${message}"\n\nWe’ll get back to you soon.\n\nSiddhartha Dental Clinic`
-
-  };
-
-
-
-  try {
-
-    await transporter.sendMail(adminMail);
-
-    await transporter.sendMail(userMail);
-
-    res.json({ success: true });
-
-  } catch (err) {
-
-    console.error(err);
-
-    res.status(500).json({ success: false });
-
-  }
-
-});
-
-
-
 // NEW: Endpoint to create a Razorpay order
 
 app.post('/create-order', async (req, res) => {
