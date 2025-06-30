@@ -690,11 +690,7 @@ body, h1, h2, h3, p, ul {
 .video-gallery-container {
   padding: 3rem 1rem;
   text-align: center;
-
   background: linear-gradient(135deg, #bce7df, #c7dfda); /* Using theme colors */
-
-  background: linear-gradient(135deg, #FFFBCA, #EFEBCD); /* Using theme colors */
-
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -1028,7 +1024,6 @@ body, h1, h2, h3, p, ul {
   margin: 0 auto;
   background-color: #bce7df;
   
-
 }
 
 .faq-section h2 {
@@ -1080,13 +1075,9 @@ body, h1, h2, h3, p, ul {
 .faq-answer {
   margin-top: 0.5rem;
   font-weight: 500;
-
   font-size: 1.0rem;
   line-height: 1.5;
   color: #021651;
-
- 
-
 }
 .faq-section {
   opacity: 0;
@@ -1103,9 +1094,7 @@ body, h1, h2, h3, p, ul {
 
 .reviews-section {
   padding: 60px 20px;
-
   background-color: #bce7df; /* Theme color */
-
   text-align: center;
 }
 
@@ -1116,9 +1105,7 @@ body, h1, h2, h3, p, ul {
 }
 
 .review-card {
-
   background: #f1eebf;
-
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 0 18px rgba(70, 53, 177, 0.1); /* Theme color shadow */
@@ -1532,60 +1519,6 @@ body, h1, h2, h3, p, ul {
   gap: 1.25rem;
 }
 
-
-/* Inputs and Textarea */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1.8px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  resize: vertical;
-  box-sizing: border-box;
-}
-.contact-section {
-  padding-bottom: 3rem;
-  text-align: center;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #4635B1; /* Theme color */
-  box-shadow: 0 0 8px rgba(70, 53, 177, 0.25); /* Theme color shadow */
-  outline: none;
-}
-
-/* Submit Button */
-.contact-form button {
-  width: 150px;
-  align-self: center;
-  padding: 12px 0;
-  background-color: #4635B1; /* Theme color */
-  color: white;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #372B8B; /* Darker shade of #4635B1 */
-}
-
-/* Status message below form */
-.contact-section > p {
-  margin-top: 1rem;
-  color: #6B8E23; /* A darker green for visibility from #AEEA94 */
-  font-weight: 600;
-  min-height: 1.2em;
-  text-align: center;
-}
-
 /* Map Area */
 
 .map-container {
@@ -1628,30 +1561,6 @@ body, h1, h2, h3, p, ul {
     padding: 2rem 1rem;
   }
 
-
-  .contact-form {
-    gap: 1rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
-    padding: 10px 14px;
-  }
-
-  .contact-form button {
-    width: 130px;
-    font-size: 1rem;
-    padding: 10px 0;
-  }
-
-  .contact-info {
-    font-size: 0.95rem;
-    padding: 0 1rem;
-  }
-
-
-
   .map-container {
     margin-top: 2rem;
   }
@@ -1662,23 +1571,6 @@ body, h1, h2, h3, p, ul {
 }
 
 @media (max-width: 480px) {
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  .contact-form button {
-    width: 120px;
-    font-size: 0.95rem;
-    padding: 8px 0;
-  }
-
-  .contact-info {
-    font-size: 0.9rem;
-  }
-
 
   .map-container iframe {
     height: 240px;
@@ -1727,11 +1619,33 @@ body, h1, h2, h3, p, ul {
 
 .booking-section input,
 .booking-section select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #fddde6, #fceabb);
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+  transition: all 0.3s ease-in-out;
+  color: #444;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
+
+.booking-section input:focus,
+.booking-section select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5);
+  background: linear-gradient(135deg, #fceabb, #ffdde1);
+}
+
+.booking-section select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
 
 /* Buttons within booking section */
 .booking-section button {
@@ -2231,7 +2145,6 @@ body, h1, h2, h3, p, ul {
   }
 
   .floating-whatsapp {
-
     bottom: 20px;
     right: 20px;
     padding: 10px;
@@ -2245,5 +2158,7 @@ body, h1, h2, h3, p, ul {
     transform: translateX(-30px);
   }
 }
+
+
 
 
