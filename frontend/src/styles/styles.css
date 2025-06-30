@@ -19,6 +19,10 @@ a {
 }
 
 /* =================== Navbar + Hero =================== */
+#home
+{
+  background-color: #bce7df;
+}
 
 
 body, h1, h2, h3, p, ul {
@@ -35,7 +39,7 @@ body, h1, h2, h3, p, ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background-color: #B771E5; /* User specified: DO NOT CHANGE - Corrected from e3c6f7 to your desired B771E5 */
+  background-color: #66efd7; /* User specified: DO NOT CHANGE - Corrected from e3c6f7 to your desired B771E5 */
   box-shadow: 0 4px 15px rgba(70, 53, 177, 0.2); /* Adding a subtle shadow for depth */
 }
 
@@ -48,6 +52,7 @@ body, h1, h2, h3, p, ul {
 
 .logo-img {
   height: 75px;
+
   width: auto;
   /* Adding a subtle border and shadow to the logo */
   border-radius: 50%; /* Make it round if it fits the logo design */
@@ -71,8 +76,8 @@ body, h1, h2, h3, p, ul {
 
 .nav-links a {
   text-decoration: none;
-  color: #FFFBCA; /* Changed to a lighter theme color for better contrast on #B771E5 background */
-  font-weight: 600; /* Made slightly bolder */
+  color: #000000; /* Changed to a lighter theme color for better contrast on #B771E5 background */
+  font-weight: 700; /* Made slightly bolder */
   padding: 8px 0; /* Add padding for a larger hit area */
   transition: color 0.3s ease, transform 0.3s ease;
   position: relative; /* For pseudo-elements */
@@ -85,12 +90,12 @@ body, h1, h2, h3, p, ul {
     left: 0;
     width: 0;
     height: 3px; /* Thickness of the underline */
-    background-color: #4635B1; /* Theme color for the underline */
+    background-color: #332782; /* Theme color for the underline */
     transition: width 0.3s ease-out;
 }
 
 .nav-links a:hover {
-  color: #4635B1; /* Change font color on hover */
+  color: #332782; /* Change font color on hover */
   transform: translateY(-2px); /* Slight lift effect */
 }
 
@@ -159,7 +164,7 @@ body, h1, h2, h3, p, ul {
   flex-wrap: wrap;
   justify-content: space-around;
   background: linear-gradient(135deg, #4635B1, #B771E5); /* Theme colors */
-  color: white;
+  color: #a9e8dc;
   padding: 3rem 2rem;
   border-radius: 30px;
   width: 80%;
@@ -292,7 +297,7 @@ body, h1, h2, h3, p, ul {
 .doctors-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #FFFBCA; /* Theme color */
+  background-color: #bce7df; /* Theme color */
 }
 
 .doctors-section h2 {
@@ -312,7 +317,7 @@ body, h1, h2, h3, p, ul {
 }
 
 .doctor-card {
-  background-color: #E6E2AC; /* Lighter shade of #FFFBCA */
+  background-color: #e1dfbc; /* Lighter shade of #FFFBCA */
   padding: 30px 24px;
   border-radius: 20px;
   box-shadow: 0 12px 22px rgba(70, 53, 177, 0.15); /* Theme color shadow */
@@ -550,7 +555,7 @@ body, h1, h2, h3, p, ul {
 
 .services-section {
   padding: 60px 20px;
-  background: #FFFBCA; /* Theme color */
+  background: #bce7df; /* Theme color */
   text-align: center;
 }
 
@@ -567,7 +572,7 @@ body, h1, h2, h3, p, ul {
 }
 
 .service-card {
-  background: #E6E2AC; /* Lighter shade of #FFFBCA */
+  background: #eae6af; /* Lighter shade of #FFFBCA */
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(70, 53, 177, 0.08); /* Theme color shadow */
   padding: 2rem;
@@ -685,7 +690,7 @@ body, h1, h2, h3, p, ul {
 .video-gallery-container {
   padding: 3rem 1rem;
   text-align: center;
-  background: linear-gradient(135deg, #FFFBCA, #EFEBCD); /* Using theme colors */
+  background: linear-gradient(135deg, #bce7df, #c7dfda); /* Using theme colors */
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -887,7 +892,7 @@ body, h1, h2, h3, p, ul {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
-  background: linear-gradient(135deg, #FFFBCA, #EFEBCD); /* Using theme colors */
+  background: linear-gradient(135deg, #bce7df, #cfe6e2); /* Using theme colors */
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(70, 53, 177, 0.06); /* Theme color shadow */
   overflow-x: hidden;
@@ -1015,8 +1020,10 @@ body, h1, h2, h3, p, ul {
 
 .faq-section {
   padding: 3rem 1rem;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  background-color: #bce7df;
+  
 }
 
 .faq-section h2 {
@@ -1068,9 +1075,9 @@ body, h1, h2, h3, p, ul {
 .faq-answer {
   margin-top: 0.5rem;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 1.5;
-  color: #000000;
+  color: #021651;
 }
 .faq-section {
   opacity: 0;
@@ -1087,7 +1094,7 @@ body, h1, h2, h3, p, ul {
 
 .reviews-section {
   padding: 60px 20px;
-  background-color: #FFFBCA; /* Theme color */
+  background-color: #bce7df; /* Theme color */
   text-align: center;
 }
 
@@ -1098,7 +1105,7 @@ body, h1, h2, h3, p, ul {
 }
 
 .review-card {
-  background: white;
+  background: #f1eebf;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 0 18px rgba(70, 53, 177, 0.1); /* Theme color shadow */
@@ -1217,7 +1224,7 @@ body, h1, h2, h3, p, ul {
   margin: 5rem 0;
   padding: 3rem 1rem;
   text-align: center;
-  background: linear-gradient(145deg, #FFFBCA, #E6E2AC); /* Using theme colors */
+  background: linear-gradient(145deg, #bce7df, #d2f2ec); /* Using theme colors */
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(70, 53, 177, 0.08); /* Theme color shadow */
   overflow: hidden;
@@ -1423,7 +1430,7 @@ body, h1, h2, h3, p, ul {
 
 .clinic-timings-section {
   padding: 60px 20px;
-  background: #FFFBCA; /* Theme color */
+  background: #bce7df; /* Theme color */
   border-radius: 16px;
   text-align: center;
   margin: 3rem 0;
@@ -2202,11 +2209,20 @@ body, h1, h2, h3, p, ul {
   }
 
   .floating-whatsapp {
-    bottom: 16px;
-    right: 16px;
+    bottom: 20px;
+    right: 20px;
     padding: 10px;
+    transform: translateX(-30px);
+  }
+
+  .floating-book {
+    bottom: 80px; /* position above WhatsApp button */
+    right: 20px;
+    padding: 10px;
+    transform: translateX(-30px);
   }
 }
+
 
 
 
